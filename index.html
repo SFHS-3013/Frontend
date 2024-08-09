@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <div class="loading" id="loading"><img src="./assets/loading.svg">Loading</div>
     <div class="container">
         <div class="navBar">
             <div class="navBarHeading clickable">
@@ -32,7 +33,7 @@
             <div class="overviewCards">
                 <div class="overviewCard">
                     <div class="overviewCardHeading">Total Devices</div>
-                    <div class="overviewCardValue">1</div>
+                    <div class="overviewCardValue" id="totalDevices">1</div>
                 </div>
                 <div class="overviewCard">
                     <div class="overviewCardHeading">Online Devices</div>
@@ -45,28 +46,8 @@
             </div>
         </div>
 
-        <div class="deviceList">
+        <div class="deviceList" id="deviceList">
             <h1>Devices</h1>
-
-            <div class="deviceDiv clickable">
-                <div class="deviceIcon">
-                    <img class="icon" src="./assets/placeholderDeviceIcon.svg">
-                    <div class="deviceName">Sample Name</div>
-                    <div class="greySeparator"></div>
-                    <div class="deviceStatus"><img src="./assets/onlineDot.svg">Online</div>
-                </div>
-                <div class="deviceActions">
-                    <div class="deviceAction rename clickable">
-                        <img class="icon" src="./assets/editIcon.svg">
-                    </div>
-                    <div class="deviceAction restart clickable">
-                        <img class="icon" src="./assets/restartIcon.svg">
-                    </div>
-                    <div class="deviceAction moreInfo clickable">
-                        <img class="icon" src="./assets/moreInfoIcon.svg">
-                    </div>
-                </div>
-            </div>
 
         </div>
     </div>
@@ -78,12 +59,7 @@
             </div>
         </div>
         <div class="notifications">
-            <div class="notification">
-                <div class="notificationText">
-                    <h1>Example</h1>
-                    <p>Sample Notification</p>
-                </div>
-            </div>
+            No Notifications
         </div>
     </div>
     <script src="./scripts/index.js"></script>
