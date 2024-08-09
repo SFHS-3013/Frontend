@@ -28,7 +28,7 @@
 
         <div class="overview">
             <div class="overviewText">
-                <img class="icon" src="./assets/onlineDot.svg"><h1>Everything Operational</h1>
+                <img class="icon" src="./assets/onlineDot.svg"><h1 id="statusText">Everything Operational</h1>
             </div>
             <div class="overviewCards">
                 <div class="overviewCard">
@@ -37,11 +37,11 @@
                 </div>
                 <div class="overviewCard">
                     <div class="overviewCardHeading">Online Devices</div>
-                    <div class="overviewCardValue">1</div>
+                    <div class="overviewCardValue" id="onlineDevices">1</div>
                 </div>
                 <div class="overviewCard">
                     <div class="overviewCardHeading">Offline Devices</div>
-                    <div class="overviewCardValue">0</div>
+                    <div class="overviewCardValue" id="offlineDevices">0</div>
                 </div>
             </div>
         </div>
@@ -58,7 +58,7 @@
                 <img class="icon" src="./assets/closeIcon.svg">
             </div>
         </div>
-        <div class="notifications">
+        <div class="notifications" id="notifications">
             No Notifications
         </div>
     </div>
