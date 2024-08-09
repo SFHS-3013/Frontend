@@ -3,6 +3,37 @@
 }
 body{
     margin:0;
+    display: flex;
+}
+.container{
+    height: 100%;
+    width: 100%;
+}
+.notificationPane{
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    width: 25rem;
+    background-color : #f8f9fa;
+}
+.notificationPaneHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f8f9fa;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.notificationPaneClose .icon{
+    margin: 1rem;
+    margin-top: 1.5rem;
+}
+.notificationPaneHeading h1{
+    margin-left: 1rem;
+}
+.notification{
+    background: aliceblue;
+    padding: 1rem;
+    border: solid #c6c2c2;
 }
 .navBar{
     display: flex;

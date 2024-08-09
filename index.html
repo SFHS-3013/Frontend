@@ -16,7 +16,7 @@
                 <h1>Dashboard</h1>
             </div>
             <div class="navBarIcons">
-                <div class="navBarIcon notifications clickable">
+                <div class="navBarIcon notifications clickable" onclick="openNotifPane()">
                     <img class="icon" src="./assets/notificationBell-withoutCircle.svg">
                 </div>
                 <div class="navBarIcon profile clickable">
@@ -70,6 +70,23 @@
 
         </div>
     </div>
+    <div class="notificationPane" id="notifPane">
+        <div class="notificationPaneHeading">
+            <h1>Notifications</h1>
+            <div class="notificationPaneClose clickable" onclick="closeNotifPane()">
+                <img class="icon" src="./assets/closeIcon.svg">
+            </div>
+        </div>
+        <div class="notifications">
+            <div class="notification">
+                <div class="notificationText">
+                    <h1>Example</h1>
+                    <p>Sample Notification</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./scripts/index.js"></script>
 </body>
 
 </html>
