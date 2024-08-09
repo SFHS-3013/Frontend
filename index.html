@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navBar">
+            <div class="navBarHeading clickable">
+                <img class="icon" src="./assets/homeIcon.svg">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="navBarIcons">
+                <div class="navBarIcon notifications clickable">
+                    <img class="icon" src="./assets/notificationBell-withoutCircle.svg">
+                </div>
+                <div class="navBarIcon profile clickable">
+                    <img class="icon" src="./assets/profileIcon.svg">
+                </div>
+            </div>
+        </div>
+
+        <div class="overview">
+            <div class="overviewText">
+                <img class="icon" src="./assets/onlineDot.svg"><h1>Everything Operational</h1>
+            </div>
+            <div class="overviewCards">
+                <div class="overviewCard">
+                    <div class="overviewCardHeading">Total Devices</div>
+                    <div class="overviewCardValue">1</div>
+                </div>
+                <div class="overviewCard">
+                    <div class="overviewCardHeading">Online Devices</div>
+                    <div class="overviewCardValue">1</div>
+                </div>
+                <div class="overviewCard">
+                    <div class="overviewCardHeading">Offline Devices</div>
+                    <div class="overviewCardValue">0</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="deviceList">
+            <h1>Devices</h1>
+
+            <div class="deviceDiv clickable">
+                <div class="deviceIcon">
+                    <img class="icon" src="./assets/placeholderDeviceIcon.svg">
+                    <div class="deviceName">Sample Name</div>
+                    <div class="greySeparator"></div>
+                    <div class="deviceStatus"><img src="./assets/onlineDot.svg">Online</div>
+                </div>
+                <div class="deviceActions">
+                    <div class="deviceAction rename clickable">
+                        <img class="icon" src="./assets/editIcon.svg">
+                    </div>
+                    <div class="deviceAction restart clickable">
+                        <img class="icon" src="./assets/restartIcon.svg">
+                    </div>
+                    <div class="deviceAction moreInfo clickable">
+                        <img class="icon" src="./assets/moreInfoIcon.svg">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+</html>
