@@ -30,6 +30,11 @@ SmartCity EnergyDashT? is a web-based dashboard designed to provide real-time in
  
 ### Pitch
 SmartCity EnergyDash™️ empowers municipalities to monitor their smart infrastructure at a glance, and enables them to pinpoint anomalies and fix them faster. With real-time monitoring and anomaly detection, our platform helps optimize energy consumption, improve asset management, and enhance overall city resilience.
+### Societal Impact and Practicality: 
+Our project tackles real-world problems that India stands to face in the future. 
+Live monitoring and anomaly detection enables maintenance workers to identify and fix problems faster, thus improving urban infrastructure and making our cities more secure and reliable. 
+<br><br>
+Multiple Device APIs can be integrated into this project, making it a one-stop solution for infrastructure maintainers.
 ### Screenshots Attached
 ![image](https://raw.githubusercontent.com/SFHS-3013/.github/main/screenshots/screenshot1.png)
 ![image](https://raw.githubusercontent.com/SFHS-3013/.github/main/screenshots/screenshot2.png)
