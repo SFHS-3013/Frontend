@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
-    <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/device.css">
 </head>
 
 <body>
@@ -27,28 +27,41 @@
         </div>
 
         <div class="overview">
-            <div class="overviewText">
-                <img id="overviewStatusIcon" class="icon" src="./assets/onlineDot.svg"><h1 id="statusText">Everything Operational</h1>
+            <div class="icon">
+                <img id="overviewIcon" src="./assets/street_light.svg">
             </div>
-            <div class="overviewCards">
-                <div class="overviewCard">
-                    <div class="overviewCardHeading">Total Devices</div>
-                    <div class="overviewCardValue" id="totalDevices">1</div>
+            <div class="info">
+                <div class="infoRow">
+                    <div>
+                        <p><strong>Name</strong></p>
+                        <p id="deviceName">CityLighting_MainStreet</p>
+                    </div>
+                    <div>
+                        <p><strong>Location</strong></p>
+                        <p id="deviceLocation">Doda</p>
+                    </div>
                 </div>
-                <div class="overviewCard">
-                    <div class="overviewCardHeading">Online Devices</div>
-                    <div class="overviewCardValue" id="onlineDevices">1</div>
+                <div class="infoRow">
+                    <div>
+                        <p id="uniqueFieldHeading"><strong>Device ID</strong></p>
+                        <p id="deviceId">ONXSXW314T</p>
+                    </div>
+                    <div>
+                        <p id="uniqueFieldHeading2"><strong>Power Usage</strong></p>
+                        <p id="devicePowerUsage">200W</p>
+                    </div>
                 </div>
-                <div class="overviewCard">
-                    <div class="overviewCardHeading">Offline Devices</div>
-                    <div class="overviewCardValue" id="offlineDevices">0</div>
+                <div class="infoRow">
+                    <div>
+                        <p><strong>Device Type</strong></p>
+                        <p id="deviceType">Street Light</p>
+                    </div>
+                    <div>
+                        <p><strong>Device Status</strong></p>
+                        <p id="deviceStatus">Operational</p>
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <div class="deviceList" id="deviceList">
-            <h1>Devices</h1>
-
         </div>
     </div>
     <div class="notificationPane" id="notifPane">
@@ -62,6 +75,7 @@
             No Notifications
         </div>
     </div>
-    <script src="scripts/index.js"></script>
+    <script src="./scripts/device.js"></script>
 </body>
+
 </html>

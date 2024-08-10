@@ -71,15 +71,15 @@ function load() {
         data => {
             console.log(data)
             document.getElementById("totalDevices").innerHTML = data.length;
-            document.getElementById("onlineDevices").innerHTML = data.filter(device => device.status === "ok").length;
-            document.getElementById("offlineDevices").innerHTML = data.filter(device => device.status !== "ok").length;
+            document.getElementById("onlineDevices").innerHTML = data.filter(device => device.status !== "offline").length;
+            document.getElementById("offlineDevices").innerHTML = data.filter(device => device.status === "offline").length;
             let notOkDevicesList = []
             data.forEach(device => {
                 let statusText = device.status.split("_")
                 statusText = statusText.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
                 if(statusText === "Ok") statusText = "Online";
                 document.getElementById("deviceList").innerHTML += `
-                    <div class="deviceDiv clickable">
+                    <div class="deviceDiv clickable" onclick="window.open('./device.html?device=${device.id}')">
                     <div class="deviceIcon">
                     <img class="icon" src="./assets/placeholderDeviceIcon.svg">
                     <div class="greySeparator"></div>
@@ -187,6 +187,9 @@ function updateStatus(){
                 document.getElementById("statusText").innerHTML = "Everything Operational";
                 document.getElementById("overviewStatusIcon").src = "./assets/okDot.svg";
             }
+            document.getElementById("totalDevices").innerHTML = data.length;
+            document.getElementById("onlineDevices").innerHTML = data.filter(device => device.status !== "offline").length;
+            document.getElementById("offlineDevices").innerHTML = data.filter(device => device.status === "offline").length;
         })
     })
 }
