@@ -1,1 +1,1 @@
-let url = "http://127.0.0.1:3069"
+let url = "https://5wcd2moyphiqwnhgn5h2fpi2ge0rhxqd.lambda-url.ap-south-1.on.aws"
