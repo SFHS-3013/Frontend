@@ -145,3 +145,29 @@ body{
     flex-direction: column;
     justify-content: center;
 }
+.actions{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.actionButton{
+    background-color: #4a5568;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition-duration: 300ms;
+}
+.actionButton:hover{
+    background-color: #2d3748;
+}
+.suggestion{
+    margin: 1rem;
+    height: 19rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}

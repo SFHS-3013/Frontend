@@ -81,3 +81,27 @@ fetch(url).then(
 )
 }
 load()
+
+function openai(){
+    document.getElementById("suggestions").style.display = "flex";
+    fetch("http://127.0.0.1:3069/suggestions", 
+    {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "id": deviceID
+        })
+    }).then(
+        response => response.json()
+    ).then(
+        data => {
+            console.log(data)
+            document.getElementById("suggestions").style.flexDirection = "column";
+            document.getElementById("suggestions").innerHTML = data.message;
+        }
+    ).catch(
+        err => console.log(err)
+    )
+}
