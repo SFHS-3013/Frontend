@@ -41,7 +41,7 @@ function notifier(){
                     </div>
                     `;
                 }
-                if(device.status === "offline"){
+                if(device.status === "off"){
                     if(document.getElementById("notifications").innerHTML.includes("No Notifications")){
                         document.getElementById("notifications").innerHTML = "";
                     }
@@ -71,8 +71,8 @@ function load() {
         data => {
             console.log(data)
             document.getElementById("totalDevices").innerHTML = data.length;
-            document.getElementById("onlineDevices").innerHTML = data.filter(device => device.status !== "offline").length;
-            document.getElementById("offlineDevices").innerHTML = data.filter(device => device.status === "offline").length;
+            document.getElementById("onlineDevices").innerHTML = data.filter(device => device.status !== "off").length;
+            document.getElementById("offlineDevices").innerHTML = data.filter(device => device.status === "off").length;
             let notOkDevicesList = []
             data.forEach(device => {
                 let statusText = device.status.split("_")
@@ -188,8 +188,8 @@ function updateStatus(){
                 document.getElementById("overviewStatusIcon").src = "./assets/okDot.svg";
             }
             document.getElementById("totalDevices").innerHTML = data.length;
-            document.getElementById("onlineDevices").innerHTML = data.filter(device => device.status !== "offline").length;
-            document.getElementById("offlineDevices").innerHTML = data.filter(device => device.status === "offline").length;
+            document.getElementById("onlineDevices").innerHTML = data.filter(device => device.status !== "off").length;
+            document.getElementById("offlineDevices").innerHTML = data.filter(device => device.status === "off").length;
         })
     })
 }
