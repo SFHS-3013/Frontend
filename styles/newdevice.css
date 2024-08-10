@@ -277,3 +277,14 @@ button:hover {
 h3 {
     margin-bottom: 10px;
 }
+.notifications{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.notification .upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

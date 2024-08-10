@@ -138,3 +138,14 @@ body{
 .time{
     margin: 1rem;
 }
+.notifications{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.notification .upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

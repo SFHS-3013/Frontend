@@ -221,3 +221,14 @@ body{
     margin: 3.5rem;
     margin-left: 0.5rem;
 }
+.notifications{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.notification .upper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
