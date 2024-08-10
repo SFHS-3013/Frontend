@@ -44,4 +44,4 @@ The screenshot below shows **AI-powered** suggestions based on live data (displa
 
 Both repositories given above contain the final project video. <br>
 Additionally, a link to the video is also given below for convenience. <br><br>
-**Link to Video:**
+**Link to Video:** https://youtu.be/_QPMTohEmNo
