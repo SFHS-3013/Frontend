@@ -17,7 +17,7 @@ fetch(url).then(
                     document.getElementById("overviewIcon").src = "./assets/" + device.type + ".svg";
                     document.getElementById("deviceName").innerHTML = device.name;
                     document.getElementById("deviceStatus").innerHTML = statusText;
-                    document.getElementById("devicePowerUsage").innerHTML = device.power_usage + "%";
+                    document.getElementById("devicePowerUsage").innerHTML = device.power_usage + "W";
                     document.getElementById("uniqueFieldHeading").innerHTML = "<strong>Lamp Count</strong>";
                     document.getElementById("deviceId").innerHTML = device.lamp_count;
                     document.getElementById("uniqueFieldHeading2").innerHTML = "<strong>Power Usage</strong>";
