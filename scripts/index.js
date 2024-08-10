@@ -78,6 +78,7 @@ function load() {
                 let statusText = device.status.split("_")
                 statusText = statusText.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
                 if(statusText === "Ok") statusText = "Online";
+                if(statusText === "Off") statusText = "Offline";
                 document.getElementById("deviceList").innerHTML += `
                     <div class="deviceDiv clickable" onclick="window.location.href = './device.html?device=${device.id}'">
                     <div class="deviceIcon">
@@ -89,19 +90,19 @@ function load() {
                     <div class="deviceStatus">
                     <img src="./assets/${device.status}Dot.svg">${statusText}
                     </div>
-                    ${device.charge_level ? `
+                    ${device.charge_level && device.status !== "off" ? `
                     <div class="battery">
                     <img src="./assets/batteryIcon.svg">
                     <div class="batteryLevel">&nbsp;&nbsp;${device.charge_level.toString().split(".")[0]}%</div>
                     </div>
                     ` : ""}
-                    ${device.power_production ? `
+                    ${device.power_production && device.status !== "off" ? `
                     <div class="battery">
                     <img src="./assets/powerIcon.svg">
                     <div class="batteryLevel">&nbsp;&nbsp;${device.power_production.toString().split(".")[0]}kW</div>
                     </div>
                     ` : ""}
-                    ${device.efficiency ? `
+                    ${device.efficiency && device.status !== "off" ? `
                     <div class="battery">
                     <img src="./assets/efficiencyIcon.svg">
                     <div class="batteryLevel">&nbsp;&nbsp;${device.efficiency.toString()}</div>
@@ -149,6 +150,7 @@ function updateStatus(){
             let statusText = device.status.split("_")
             statusText = statusText.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
             if(statusText === "Ok") statusText = "Online";
+            if(statusText === "Off") statusText = "Offline";
             document.getElementById(`statusIcons${device.id}`).innerHTML += `
                     <div class="deviceStatus">
                     <img src="./assets/${device.status}Dot.svg">${statusText}
