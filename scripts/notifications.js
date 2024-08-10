@@ -6,7 +6,7 @@ function closeNotifPane() {
 }
 let audio = new Audio("./assets/notificationSound.mp3");
 function notifier(){
-    fetch(url).then(
+    fetch(url + '/devices').then(
         response => response.json()
     ).then(
         data => {
