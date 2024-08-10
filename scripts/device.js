@@ -105,3 +105,45 @@ function openai(){
         err => console.log(err)
     )
 }
+
+function update(){
+    fetch(url).then(
+        response => response.json()
+    ).then(
+        data => {
+            data.forEach(device => {
+                if(device.id === deviceID){
+                    let statusText = device.status.split("_")
+                    statusText = statusText.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
+                    if(statusText === "Ok") statusText = "Online";
+                    if(device.type === "street_light"){
+                        document.getElementById("deviceStatus").innerHTML = statusText;
+                        document.getElementById("devicePowerUsage").innerHTML = device.power_usage + "W";
+                    }
+                    if(device.type === "battery"){
+                        document.getElementById("deviceStatus").innerHTML = statusText;
+                        document.getElementById("devicePowerUsage").innerHTML = device.charge_level + "%";
+                    }
+                    if(device.type === "solar"){
+                        document.getElementById("deviceStatus").innerHTML = statusText;
+                        document.getElementById("devicePowerUsage").innerHTML = device.efficiency;
+                        document.getElementById("deviceId").innerHTML = device.power_production + "kW";
+                    }
+                    if(device.type === "wind"){
+                        document.getElementById("deviceStatus").innerHTML = statusText;
+                        document.getElementById("deviceId").innerHTML = device.power_production + "kW";
+                    }
+                    if(device.type === "hydro"){
+                        document.getElementById("deviceStatus").innerHTML = statusText;
+                        document.getElementById("deviceId").innerHTML = device.power_production + "kW";
+                        document.getElementById("devicePowerUsage").innerHTML = device.water_flow + "m";
+                    }
+                }
+            })
+        }
+    ).catch(
+        err => console.log(err)
+    )
+}
+
+setInterval(update, 5000)
