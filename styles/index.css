@@ -4,6 +4,7 @@
 body{
     margin:0;
     display: flex;
+    background-color: #f0f4f8;
 }
 .container{
     height: 100%;
@@ -14,13 +15,13 @@ body{
     display: none;
     flex-direction: column;
     width: 25rem;
-    background-color : #f8f9fa;
+    background-color: #e2e8f0;
 }
 .notificationPaneHeading{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: #e2e8f0;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .notificationPaneClose .icon{
@@ -29,17 +30,19 @@ body{
 }
 .notificationPaneHeading h1{
     margin-left: 1rem;
+    color: #2d3748;
 }
 .notification{
-    background: aliceblue;
+    background: #ebf8ff;
     padding: 1rem;
-    border: solid #c6c2c2;
+    border: solid #90cdf4;
+    color: #2c5282;
 }
 .navBar{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #f8f9fa;
+    background-color: #4a5568;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .icon{
@@ -52,6 +55,7 @@ body{
 }
 .navBarHeading h1{
     margin-left: 1rem;
+    color: #e2e8f0;
 }
 .navBarIcons{
     display: flex;
@@ -70,15 +74,16 @@ body{
     cursor: pointer;
 }
 .navBarIcon:hover {
-    background-color: #f1f3f5;
+    background-color: #2d3748;
     border-radius: 5px;
 }
 .navBarHeading:hover{
-    background-color: #f1f3f5;
+    background-color: #2d3748;
     border-radius: 5px;
 }
 .deviceList h1{
     margin: 1rem;
+    color: #2d3748;
 }
 .deviceDiv{
     transition-duration: 300ms;
@@ -89,9 +94,10 @@ body{
     margin: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 1rem;
+    background-color: #ffffff;
 }
 .deviceDiv:hover{
-    background-color: #f1f3f5;
+    background-color: #edf2f7;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 .deviceStatus img{
@@ -108,36 +114,48 @@ body{
 .deviceStatus{
     display: flex;
     align-items: center;
+    margin: 1.5rem;
 }
 .deviceActions{
     display: flex;
+    align-items: center;
+}
+.deviceActions .greySeparator{
+    margin-right: 0.5rem;
+}
+.deviceName {
+    width: 15rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 .deviceAction .icon {
     transition-duration: 200ms;
-    background-color: #f5f5f5;
+    background-color: #edf2f7;
     padding: 0.5rem;
     border-radius: 1rem;
     margin: 0.5rem;
 }
 .deviceAction .icon:hover {
-    background-color: #cacdcf;
+    background-color: #cbd5e0;
 }
 .greySeparator{
-    background-color: #bebebe;
+    background-color: #a0aec0;
     height: 3rem;
     width: 1px;
     margin-left: 0.6rem;
 }
 .overview{
-    border: solid #b9b8bc;
+    border: solid #a0aec0;
     border-radius: 1rem;
     margin: 1rem;
     height: 20rem;
+    background-color: #ffffff;
 }
 .overviewText{
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #2d3748;
 }
 .overviewCards{
     margin-top: 6rem;
@@ -150,16 +168,18 @@ body{
     height: 3rem;
     margin: 1rem;
     width: 8rem;
-    background: white;
+    background: #edf2f7;
     border-radius: 1rem;
     padding: 1rem;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 .overviewCardHeading{
     font-weight: bold;
+    color: #2d3748;
 }
 .overviewCardValue{
     margin-top: 0.5rem;
+    color: #4a5568;
 }
 .overviewText .icon{
     margin-top: 5px;
@@ -174,8 +194,24 @@ body{
     width: 100%;
     z-index: 100;
     position: absolute;
-    background-color: white;
+    background-color: #f0f4f8;
 }
 .loading img{
     height: 10rem;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+.statusIcons{
+    display: flex;
+    align-items: center;
+}
+.statusIcons img {
+    height: 2rem;
+}
+.battery{
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
 }
