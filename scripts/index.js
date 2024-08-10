@@ -69,7 +69,6 @@ function load() {
         response => response.json()
     ).then(
         data => {
-            console.log(data)
             document.getElementById("totalDevices").innerHTML = data.length;
             document.getElementById("onlineDevices").innerHTML = data.filter(device => device.status !== "off").length;
             document.getElementById("offlineDevices").innerHTML = data.filter(device => device.status === "off").length;
