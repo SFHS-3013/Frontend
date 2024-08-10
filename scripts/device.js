@@ -33,7 +33,7 @@ function load() {
                         document.getElementById("deviceStatus").innerHTML = statusText;
                         document.getElementById("devicePowerUsage").innerHTML = device.charge_level + "%";
                         document.getElementById("uniqueFieldHeading").innerHTML = "<strong>Capacity</strong>";
-                        document.getElementById("deviceId").innerHTML = 1000;
+                        document.getElementById("deviceId").innerHTML = device.capacity + "kWh";
                         document.getElementById("uniqueFieldHeading2").innerHTML = "<strong>Charge Level</strong>";
                         document.getElementById("deviceType").innerHTML = deviceTypeString;
                         document.getElementById("deviceLocation").innerHTML = device.location;
