@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./styles/newdevice.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navBar">
+            <div class="navBarHeading clickable">
+                <img class="icon" src="./assets/homeIcon.svg">
+                <h1>Dashboard</h1>
+            </div>
+            <div class="navBarIcons">
+                <div class="navBarIcon notifications clickable" onclick="openNotifPane()">
+                    <img class="icon" src="./assets/notificationBell-withoutCircle.svg">
+                </div>
+                <div class="navBarIcon profile clickable">
+                    <img class="icon" src="./assets/profileIcon.svg">
+                </div>
+            </div>
+        </div>
+        <div class="form-container">
+            <form id="deviceForm">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username"><br>
+    
+                <label for="auth">Auth:</label>
+                <input type="text" id="auth" name="auth"><br>
+    
+                <label for="id">Device ID:</label>
+                <input type="text" id="id" name="id"><br>
+    
+                <label for="name">Device Name:</label>
+                <input type="text" id="name" name="name"><br>
+    
+                <label for="location">Device Location:</label>
+                <input type="text" id="location" name="location"><br>
+    
+                <label for="type">Device Type:</label>
+                <input type="text" id="type" name="type"><br>
+    
+                <label for="status">Device Status:</label>
+                <input type="text" id="status" name="status"><br>
+    
+                <div id="customParams">
+                    <h3>Custom Params</h3>
+                    <div class="customParam">
+                        <label for="paramName">Property Name:</label>
+                        <input type="text" class="paramName" name="paramName"><br>
+                        <label for="paramValue">Property Value:</label>
+                        <input type="text" class="paramValue" name="paramValue"><br>
+                    </div>
+                </div>
+                <button type="button" onclick="addCustomParam()">Add Custom Param</button><br>
+                <button type="button" onclick="submitForm()">Submit</button>
+            </form>
+        </div>
+    </div>
+    
+    <script src="scripts/newdevice.js"></script>
+</body>
+</html>

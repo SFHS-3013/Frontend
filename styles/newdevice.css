@@ -1,0 +1,278 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+body{
+    margin:0;
+    display: flex;
+    background-color: #f0f4f8;
+}
+.container{
+    height: 100%;
+    width: 100%;
+}
+.notificationPane{
+    height: 100vh;
+    display: none;
+    flex-direction: column;
+    width: 25rem;
+    background-color: #e2e8f0;
+}
+.notificationPaneHeading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #e2e8f0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.notificationPaneClose .icon{
+    margin: 1rem;
+    margin-top: 1.5rem;
+}
+.notificationPaneHeading h1{
+    margin-left: 1rem;
+    color: #2d3748;
+}
+.notification{
+    background: #ebf8ff;
+    padding: 1rem;
+    border: solid #90cdf4;
+    color: #2c5282;
+}
+.navBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a5568;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.icon{
+    height: 2rem;
+}
+.navBarHeading{
+    margin-left: 1rem;
+    display: flex;
+    align-items: center;
+}
+.navBarHeading h1{
+    margin-left: 1rem;
+    color: #e2e8f0;
+}
+.navBarIcons{
+    display: flex;
+    align-items: center;
+    margin: 0 1rem;
+}
+.navBarIcon{
+    display: flex;
+    align-items: center;
+    height: 85.38px;
+    margin: 0 0.1rem;
+    width: 4rem;
+    justify-content: center;
+}
+.clickable {
+    cursor: pointer;
+}
+.navBarIcon:hover {
+    background-color: #2d3748;
+    border-radius: 5px;
+}
+.navBarHeading:hover{
+    background-color: #2d3748;
+    border-radius: 5px;
+}
+.deviceList h1{
+    margin: 1rem;
+    color: #2d3748;
+}
+.deviceDiv{
+    transition-duration: 300ms;
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+    background-color: #ffffff;
+}
+.deviceDiv:hover{
+    background-color: #edf2f7;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.deviceStatus img{
+    height: 2rem;
+}
+.deviceIcon{
+    display: flex;
+    align-items: center;
+}
+.deviceIcon .icon{
+    margin-right: 0.5rem;
+    margin-left: 1rem;
+}
+.deviceStatus{
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
+}
+.deviceActions{
+    display: flex;
+    align-items: center;
+}
+.deviceActions .greySeparator{
+    margin-right: 0.5rem;
+}
+.deviceName {
+    width: 15rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.deviceAction .icon {
+    transition-duration: 200ms;
+    background-color: #edf2f7;
+    padding: 0.5rem;
+    border-radius: 1rem;
+    margin: 0.5rem;
+}
+.deviceAction .icon:hover {
+    background-color: #cbd5e0;
+}
+.greySeparator{
+    background-color: #a0aec0;
+    height: 3rem;
+    width: 1px;
+    margin-left: 0.6rem;
+}
+.overview{
+    border: solid #a0aec0;
+    border-radius: 1rem;
+    margin: 1rem;
+    height: 20rem;
+    background-color: #ffffff;
+}
+.overviewText{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #2d3748;
+}
+.overviewCards{
+    margin-top: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.overviewCard{
+    text-align: center;
+    height: 3rem;
+    margin: 1rem;
+    width: 8rem;
+    background: #edf2f7;
+    border-radius: 1rem;
+    padding: 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.overviewCardHeading{
+    font-weight: bold;
+    color: #2d3748;
+}
+.overviewCardValue{
+    margin-top: 0.5rem;
+    color: #4a5568;
+}
+.overviewText .icon{
+    margin-top: 5px;
+    height: 3rem;
+}
+.loading{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+    z-index: 100;
+    position: absolute;
+    background-color: #f0f4f8;
+}
+.loading img{
+    height: 10rem;
+}
+
+*::-webkit-scrollbar {
+    display: none;
+}
+.statusIcons{
+    display: flex;
+    align-items: center;
+}
+.statusIcons img {
+    height: 2rem;
+}
+.battery{
+    display: flex;
+    align-items: center;
+    margin: 1.5rem;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.form-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    padding: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.customParam {
+    margin-bottom: 15px;
+}
+
+h3 {
+    margin-bottom: 10px;
+}
