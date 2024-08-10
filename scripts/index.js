@@ -88,19 +88,19 @@ function updateStatus(){
                     <div class="deviceStatus">
                     <img src="./assets/${device.status}Dot.svg">${statusText}
                     </div>
-                    ${device.charge_level ? `
+                    ${device.charge_level && device.status !== "off" ? `
                     <div class="battery">
                     <img src="./assets/batteryIcon.svg">
                     <div class="batteryLevel">&nbsp;&nbsp;${device.charge_level.toString().split(".")[0]}%</div>
                     </div>
                     ` : ""}
-                    ${device.power_production ? `
+                    ${device.power_production && device.status !== "off" ? `
                     <div class="battery">
                     <img src="./assets/powerIcon.svg">
                     <div class="batteryLevel">&nbsp;&nbsp;${device.power_production.toString().split(".")[0]}kW</div>
                     </div>
                     ` : ""}
-                    ${device.efficiency ? `
+                    ${device.efficiency && device.status !== "off" ? `
                     <div class="battery">
                     <img src="./assets/efficiencyIcon.svg">
                     <div class="batteryLevel">&nbsp;&nbsp;${device.efficiency.toString()}</div>
