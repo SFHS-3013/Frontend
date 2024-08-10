@@ -1,9 +1,8 @@
 const urlParams = new URLSearchParams(window.location.search);
 let deviceID = urlParams.get('device');
 let loadedData;
-let url = "http://127.0.0.1:3069/devices"
 function load() {
-    fetch(url).then(
+    fetch(url + '/devices').then(
         response => response.json()
     ).then(
         data => {
@@ -86,7 +85,7 @@ load()
 
 function openai() {
     document.getElementById("suggestions").style.display = "flex";
-    fetch("http://127.0.0.1:3069/suggestions",
+    fetch(url + '/suggestions',
         {
             method: 'POST',
             headers: {
@@ -109,7 +108,7 @@ function openai() {
 }
 
 function update() {
-    fetch(url).then(
+    fetch(url + '/devices').then(
         response => response.json()
     ).then(
         data => {
@@ -156,7 +155,7 @@ setInterval(update, 5000)
 
 function toggle() {
     let device = loadedData.find(device => device.id === deviceID);
-    fetch('http://127.0.0.1:3069/setdevicestatus', {
+    fetch(url + '/setdevicestatus', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

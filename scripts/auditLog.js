@@ -1,5 +1,4 @@
-let url = "http://127.0.0.1:3069/auditlog"
-fetch(url, {
+fetch(url + '/auditlog', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',

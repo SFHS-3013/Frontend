@@ -1,6 +1,5 @@
-let url = "http://127.0.0.1:3069/devices"
 function load() {
-    fetch(url).then(
+    fetch(url + '/devices').then(
         response => response.json()
     ).then(
         data => {
@@ -75,7 +74,7 @@ function load() {
 load()
 
 function updateStatus(){
-    fetch(url).then(
+    fetch(url + "/devices").then(
         response => response.json()
     ).then(data => {
         let notOkDevicesList = []

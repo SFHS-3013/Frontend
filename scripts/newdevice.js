@@ -39,7 +39,7 @@ function submitForm() {
         }
     });
     console.log(jsonData);
-    fetch('http://127.0.0.1:3069/newdevice', {
+    fetch(url + '/newdevice', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
