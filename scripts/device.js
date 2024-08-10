@@ -162,7 +162,7 @@ function toggle() {
         },
         body: JSON.stringify({
             "user": "user",
-            "auth": "real",
+            "auth": "SFHS3013",
             "deviceID": deviceID,
             "status": device.status !== "off" ? "off" : "ok"
         })

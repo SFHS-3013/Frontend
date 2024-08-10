@@ -2,7 +2,7 @@ fetch(url + '/auditlog', {
   method: 'GET',
   headers: {
     'Content-Type': 'application/json',
-    'auth': 'real'
+    'auth': 'SFHS3013'
   }
 }).then(response => response.json())
   .then(data => {
