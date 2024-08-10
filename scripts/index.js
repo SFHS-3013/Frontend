@@ -79,7 +79,7 @@ function load() {
                 statusText = statusText.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
                 if(statusText === "Ok") statusText = "Online";
                 document.getElementById("deviceList").innerHTML += `
-                    <div class="deviceDiv clickable" onclick="window.open('./device.html?device=${device.id}')">
+                    <div class="deviceDiv clickable" onclick="window.location.href = './device.html?device=${device.id}'">
                     <div class="deviceIcon">
                     <img class="icon" src="./assets/placeholderDeviceIcon.svg">
                     <div class="greySeparator"></div>
