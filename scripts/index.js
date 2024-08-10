@@ -85,7 +85,7 @@ function load() {
                     <div class="greySeparator"></div>
                     <div class="deviceName">${device.name}</div>
                     <div class="greySeparator"></div>
-                    <div class="statusIcons">
+                    <div class="statusIcons" id="statusIcons${device.id}">
                     <div class="deviceStatus">
                     <img src="./assets/${device.status}Dot.svg">${statusText}
                     </div>
@@ -138,3 +138,56 @@ function load() {
     )
 }
 load()
+
+function updateStatus(){
+    fetch(url).then(
+        response => response.json()
+    ).then(data => {
+        let notOkDevicesList = []
+        data.forEach(device => {
+            document.getElementById(`statusIcons${device.id}`).innerHTML = "";
+            let statusText = device.status.split("_")
+            statusText = statusText.map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(" ")
+            if(statusText === "Ok") statusText = "Online";
+            document.getElementById(`statusIcons${device.id}`).innerHTML += `
+                    <div class="deviceStatus">
+                    <img src="./assets/${device.status}Dot.svg">${statusText}
+                    </div>
+                    ${device.charge_level ? `
+                    <div class="battery">
+                    <img src="./assets/batteryIcon.svg">
+                    <div class="batteryLevel">&nbsp;&nbsp;${device.charge_level.toString().split(".")[0]}%</div>
+                    </div>
+                    ` : ""}
+                    ${device.power_production ? `
+                    <div class="battery">
+                    <img src="./assets/powerIcon.svg">
+                    <div class="batteryLevel">&nbsp;&nbsp;${device.power_production.toString().split(".")[0]}kW</div>
+                    </div>
+                    ` : ""}
+                    ${device.efficiency ? `
+                    <div class="battery">
+                    <img src="./assets/efficiencyIcon.svg">
+                    <div class="batteryLevel">&nbsp;&nbsp;${device.efficiency.toString()}</div>
+                    </div>
+                    ` : ""}
+            `
+            if(device.status !== "ok"){
+                notOkDevicesList.push(device)
+            }
+            if(notOkDevicesList.length === 1){
+                document.getElementById("statusText").innerHTML = `${notOkDevicesList[0].name} requires your attention`;
+                document.getElementById("overviewStatusIcon").src = "./assets/offlineDot.svg";
+            }
+            else if(notOkDevicesList.length > 1){
+                document.getElementById("statusText").innerHTML = `${notOkDevicesList.length} devices require your attention`;
+                document.getElementById("overviewStatusIcon").src = "./assets/offlineDot.svg";
+            }
+            else{
+                document.getElementById("statusText").innerHTML = "Everything Operational";
+                document.getElementById("overviewStatusIcon").src = "./assets/okDot.svg";
+            }
+        })
+    })
+}
+setInterval(updateStatus, 5000)
