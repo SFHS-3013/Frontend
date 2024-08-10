@@ -18,6 +18,7 @@ fetch(url, {
             </div>
         `;
     });
+    document.getElementById('loading').style.display = 'none';
   })
   .catch((error) => {
     console.error('Error:', error);
