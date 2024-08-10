@@ -210,7 +210,7 @@ body{
 .statusIcons{
     display: flex;
     align-items: center;
-    width: 40rem;
+    width: 29.5rem;
 }
 .statusIcons img {
     height: 2rem;
